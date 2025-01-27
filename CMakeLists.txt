@@ -31,6 +31,7 @@ set( cmake_auto_sub_dir_name "auto_generate_files" )
 
 get_path_cmake_dir_path( lib_list "${CMAKE_CURRENT_SOURCE_DIR}/srcs/libs/users" "CMakeLists.txt" )
 get_path_cmake_dir_path( bin_list "${CMAKE_CURRENT_SOURCE_DIR}/srcs/book sources/" "CMakeLists.txt" )
+get_path_cmake_dir_path( bin_list "${CMAKE_CURRENT_SOURCE_DIR}/srcs/test code/" "CMakeLists.txt" )
 
 list( APPEND out_path_list ${lib_list} ${bin_list} )
 
