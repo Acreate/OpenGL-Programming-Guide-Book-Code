@@ -1,8 +1,10 @@
 ﻿cmake_minimum_required( VERSION 3.19 )
 
-get_current_dir_name( prject_name ${CMAKE_CURRENT_SOURCE_DIR} )
-get_parent_dir_name( parent_name ${CMAKE_CURRENT_SOURCE_DIR} )
-normal_projectnam( "${parent_name} ${prject_name}" result_name )
+get_absolute_path( absFilePath ${CMAKE_CURRENT_LIST_FILE} )
+string_splite( result_list ${absFilePath} ${cmake_sep_char} )
+list( GET result_list -3 -2 -1 resultList )
+string( JOIN " " jionResult ${resultList} )
+normal_project_name( result_name "${jionResult}" )
 set( prject_name ${result_name} )
 message( "============ ${prject_name}" )
 message( "name =" ${prject_name} )

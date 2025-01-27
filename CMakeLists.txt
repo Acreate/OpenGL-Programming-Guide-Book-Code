@@ -10,7 +10,7 @@ set( CMAKE_CXX_VISIBILITY_PRESET hidden )
 
 find_package( CmakeFuncs REQUIRED PATHS "${CMAKE_CURRENT_SOURCE_DIR}/srcs/cmakeFuncs/CmakeFuncs" )
 
-get_current_dir_name( prject_name ${CMAKE_CURRENT_SOURCE_DIR} )
+normal_project_name( prject_name ${CMAKE_CURRENT_SOURCE_DIR}  )
 message( "============ ${prject_name}" )
 message( "name = " ${prject_name} )
 project( ${prject_name} VERSION 0.1 LANGUAGES CXX )
@@ -36,6 +36,8 @@ list( APPEND out_path_list ${lib_list} ${bin_list} )
 
 set( libs_path "${CMAKE_CURRENT_SOURCE_DIR}/srcs/libs/" )
 find_package( BinLib REQUIRED PATHS "${libs_path}/bin/" )
+
+get_cmake_separator( cmake_sep_char )
 
 filter_path_repetition( list_result out_path_list )
 append_sub_directory_cmake_project_path( list_result )
