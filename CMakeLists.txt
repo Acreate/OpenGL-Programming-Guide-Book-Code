@@ -35,7 +35,6 @@ get_path_cmake_dir_path( bin_list "${CMAKE_CURRENT_SOURCE_DIR}/srcs/book sources
 list( APPEND out_path_list ${lib_list} ${bin_list} )
 
 set( libs_path "${CMAKE_CURRENT_SOURCE_DIR}/srcs/libs/" )
-find_package( BinLib REQUIRED PATHS "${libs_path}/bin/" )
 
 get_cmake_separator( cmake_sep_char )
 
