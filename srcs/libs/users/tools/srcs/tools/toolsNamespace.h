@@ -8,8 +8,6 @@ namespace cyl {
 	namespace tools {
 		/// @brief 路径操作类
 		class TOOLS_EXPORT path;
-		/// @brief 图片类
-		class TOOLS_EXPORT Image;
 		/// @brief 输出输入操作类
 		namespace io { }
 		/// @brief 时间操作类
